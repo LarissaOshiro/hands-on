@@ -1,0 +1,50 @@
+﻿@model SegfyLarissa.Models.Seguro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Dados de um Seguro</h2>
+
+<div>
+    <h4>Seguro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObjSegurado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObjSegurado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar ao Menu", "Index")
+</p>

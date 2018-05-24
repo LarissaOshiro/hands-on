@@ -1,0 +1,15 @@
+﻿@model SegfyLarissa.Models.Seguro
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>Error</h2>
+<h3 class="text-danger">Seguro não encontrado.</h3>
+
+<p>
+    @Html.ActionLink("Voltar ao Menu", "Index") |
+    @Html.ActionLink("Editar um seguro", "EditFromMenu") |
+    @Html.ActionLink("Excluir um seguro", "DeleteFromMenu") 
+</p>
+

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SegfyLarissa.Models.Seguro>
+
+@{
+    ViewBag.Title = "ShowAll";
+}
+
+<h2>ShowAll</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar um seguro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ObjSegurado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocCliente)
+        </td>
+        <td>
+            @Html.DisplayName(item.DescricaoTipo())
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObjSegurado)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Visualizar Seguro", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Voltar ao Menu", "Index")
+</div>

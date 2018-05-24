@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SegfyLarissa.Models.Seguro>
+
+@{
+    ViewBag.Title = "Seguros";
+}
+
+<h2>Gerenciamento de Cadastro de Seguros</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar um seguro", "Create")
+</p>
+<p>
+    @Html.ActionLink("Editar um seguro", "EditFromMenu")
+</p>
+<p>
+    @Html.ActionLink("Excluir um seguro", "DeleteFromMenu")
+</p>
+<p>
+    @Html.ActionLink("Listar todos os seguros", "ShowAll")
+</p>
+<p>
+    @Html.ActionLink("Visualizar um seguro de veículo", "FindAuto")
+</p>
+

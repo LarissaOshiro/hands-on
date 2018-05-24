@@ -1,0 +1,13 @@
+﻿@model SegfyLarissa.Models.Seguro
+
+@{
+    ViewBag.Title = "Erro de validação";
+}
+
+<h3 class="text-danger">@ViewBag.ErrorMessage</h3>
+
+<p>
+    @Html.ActionLink("Voltar ao Menu", "Index") |
+    @Html.ActionLink("Editar um seguro", "EditFromMenu") |
+    @Html.ActionLink("Cadastrar um seguro", "Create")
+</p>
